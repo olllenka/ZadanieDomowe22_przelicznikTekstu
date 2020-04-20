@@ -17,9 +17,9 @@ public class TextCountServlet extends HttpServlet {
         PrintWriter writer = response.getWriter();
 
         writer.println(String.format("<p> %s </p><br/>", text));
-        writer.println(String.format("<h1>Ilość słów: %d</h1><br/>", TextStats.numberOfWords(text)));
-        writer.println(String.format("<h1>Ilość znaków: %d</h1><br/>", TextStats.numberOfAllChars(text)));
-        writer.println(String.format("<h1>Ilość znaków (bez spacji): %d</h1><br/>", TextStats.numberOfChars(text)));
-        writer.println(String.format("<h1>Palindrom: %s</h1><br/>", TextStats.isPalindrom(text)));
+        writer.println(String.format("<h1>Ilość słów: %d</h1><br/>", TextStatisticsUtils.numberOfWords(text)));
+        writer.println(String.format("<h1>Ilość znaków: %d</h1><br/>", TextStatisticsUtils.numberOfAllChars(text)));
+        writer.println(String.format("<h1>Ilość znaków (bez spacji): %d</h1><br/>", TextStatisticsUtils.numberOfChars(text)));
+        writer.println(String.format("<h1>Palindrom: %s</h1><br/>", TextStatisticsUtils.isPalindrom(text)));
     }
 }

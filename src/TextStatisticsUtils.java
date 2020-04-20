@@ -1,4 +1,7 @@
-public class TextStats {
+public final class TextStatisticsUtils {
+
+    private TextStatisticsUtils() {
+    }
 
     public static int numberOfWords(String text){
         String[] words = text.split(" ");
